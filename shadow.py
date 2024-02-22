@@ -148,10 +148,10 @@ async def Hussein(event):
 
 ===== 𝗦𝗵𝗮𝗱𝗼𝘄 =====
     **"""
-        await event.reply(file='https://telegra.ph/file/a9ab192d3196e014ee015.jpg', message=joker_313)
+        await event.reply(file='https://telegra.ph/file/8f66db0a9a57823dd66bc.jpg', message=joker_313)
     elif event.pattern_match.group(1) == "فحص":
         hussein_ali = "**[+] بوت النشر يعمل بنجاح✅\n[+] في حال وجود مشكلة او استفسار تواصل معي\n t.me/ooShadow**"
-        await event.reply(file='https://telegra.ph/file/a9ab192d3196e014ee015.jpg', message=hussein_ali)
+        await event.reply(file='https://telegra.ph/file/8f66db0a9a57823dd66bc.jpg', message=hussein_ali)
         joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
         joker = Get(joker)
         try:
