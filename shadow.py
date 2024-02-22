@@ -172,18 +172,30 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 14])
 
-@shadow.on(events.NewMessage(outgoing=True, pattern=r"\.قلب"))
+@shadow.on(events.NewMessage(outgoing=True, pattern=r"\.قلوب"))
 async def _(event):
     event = await event.edit("حسناً")
     animation_interval = 0.2
     animation_ttl = range(96)
     await event.edit("يتم ..")
     animation_chars = [
-        "❤️", "🖤", "💜", "🧡", "💛", "💚", "💙"
+        "❤️",
+        "❤️🖤",
+        "❤️🖤💜",
+        "❤️🖤💜🧡",
+        "❤️🖤💜🧡💛",
+        "❤️🖤💜🧡💛💚",
+        "❤️🖤💜🧡💛💚💙",
+        "❤️🖤💜🧡💛💚",
+        "❤️🖤💜🧡💛",
+        "❤️🖤💜🧡",
+        "❤️🖤💜",
+        "❤️🖤",
+        "💓"
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
-        await event.edit(animation_chars[i % 14])
+        await event.edit(animation_chars[i % 17])
 
 print('تم تشغيل بوت النشر التلقائي  ')
 shadow.run_until_disconnected()
