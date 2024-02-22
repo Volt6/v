@@ -159,45 +159,31 @@ async def Hussein(event):
         except BaseException:
             pass
 
-@shadow.on(events.NewMessage(outgoing=True, pattern="الوان قلوب(?: |$)(.*)"))
+@shadow.on(events.NewMessage(outgoing=True, pattern=r"\.قلب"))
 async def _(event):
-    "animation command"
-    animation_interval = 0.3
-    animation_ttl = range(54)
-    event = await edit_or_reply(event, "🖤")
+    event = await event.edit("حسناً")
+    animation_interval = 0.2
+    animation_ttl = range(96)
+    await event.edit("يتم ..")
     animation_chars = [
-        "❤️",
-        "🧡",
-        "💛",
-        "💚",
-        "💙",
-        "💜",
-        "🖤",
-        "💘",
-        "💝",
-        "❤️",
-        "🧡",
-        "💛",
-        "💚",
-        "💙",
-        "💜",
-        "🖤",
-        "💘",
-        "💝",
+        "❤️", "🖤", "💜", "🧡", "💛", "💚", "💙"
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
-        await event.edit(animation_chars[i % 18])
+        await event.edit(animation_chars[i % 14])
 
-@shadow.on(events.NewMessage(outgoing=True, pattern="قلوب(?: |$)(.*)"))
+@shadow.on(events.NewMessage(outgoing=True, pattern=r"\.قلب"))
 async def _(event):
-    "أمر الرسوم المتحركة"
-    event = await edit_or_reply(event, "قلوب")
-    deq = deque(list("❤️🧡💛💚💙💜🖤"))
-    for _ in range(20):
-        await asyncio.sleep(0.2)
-        await event.edit("".join(deq))
-        deq.rotate(1)
+    event = await event.edit("حسناً")
+    animation_interval = 0.2
+    animation_ttl = range(96)
+    await event.edit("يتم ..")
+    animation_chars = [
+        "❤️", "🖤", "💜", "🧡", "💛", "💚", "💙"
+    ]
+    for i in animation_ttl:
+        await asyncio.sleep(animation_interval)
+        await event.edit(animation_chars[i % 14])
 
 print('تم تشغيل بوت النشر التلقائي  ')
 shadow.run_until_disconnected()
