@@ -159,7 +159,7 @@ async def Hussein(event):
         except BaseException:
             pass
 
-@shadow.on(events.NewMessage(pattern="الوان قلوب(?: |$)(.*)"))
+@shadow.on(events.NewMessage(outgoing=True, pattern="الوان قلوب(?: |$)(.*)"))
 async def _(event):
     "animation command"
     animation_interval = 0.3
@@ -189,7 +189,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 18])
 
-@shadow.on(events.NewMessage(pattern="قلوب(?: |$)(.*)"))
+@shadow.on(events.NewMessage(outgoing=True, pattern="قلوب(?: |$)(.*)"))
 async def _(event):
     "أمر الرسوم المتحركة"
     event = await edit_or_reply(event, "قلوب")
